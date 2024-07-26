@@ -1,0 +1,20 @@
+{
+  "name": "api_v0.1.1",
+  "version": "1.0.0",
+  "description": "api v0.1.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "country-timezone": "^1.0.8",
+    "express": "^4.19.2",
+    "iso-3166-1": "^2.1.1",
+    "moment-timezone": "^0.5.45",
+    "nodemon": "^3.1.4"
+  },
+  "type": "module"
+}
