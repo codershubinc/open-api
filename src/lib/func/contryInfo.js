@@ -23,7 +23,7 @@ class contryInfo {
         // Function to dynamically import the module
         const loadModule = async () => {
             const RandomCountrySelector = Random.FromAnArray(country)
-            console.log('R', RandomCountrySelector);
+            // console.log('R', RandomCountrySelector);
 
             Rand = RandomCountrySelector
             try {
@@ -31,7 +31,7 @@ class contryInfo {
                 const data = await import(modulePath);
                 return data;
             } catch (error) {
-                console.error('Error loading module:', error);
+                // console.error('Error loading module:', error);
                 return null
             }
         };
