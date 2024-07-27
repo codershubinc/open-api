@@ -1,8 +1,8 @@
-import ContryInfo from "../../../../lib/func/contryInfo.js"
+import ContryInfo from "../../../../utils/func/contryInfo.js"
 import { asyncHandler } from '../../../../utils/asyncHandler.js'
 import { ApiResponse } from "../../../../utils/responce/api/responce.api.js";
 import { ApiError } from "../../../../utils/responce/api/error.api.js";
-import getCountryNameByCountryCode from "../../../../lib/func/contryByContryCode.js";
+import getCountryNameByCountryCode from "../../../../utils/func/contryByContryCode.js";
 
 
 

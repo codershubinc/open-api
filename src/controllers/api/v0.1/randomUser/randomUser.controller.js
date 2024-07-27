@@ -1,4 +1,4 @@
-import Random from "../../../../lib/func/Random.js"
+import Random from "../../../../utils/func/Random.js"
 import smallUsers from "../../../../lib/data/userData0.js"
 import users from "../../../../lib/data/userData1.js"
 import bigUsers from "../../../../lib/data/userData2.js"
