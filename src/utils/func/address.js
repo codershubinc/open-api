@@ -3,7 +3,7 @@ import Random from "./Random.js"
 import ContryInfo from "./contryInfo.js"
 import getCountryNameByCountryCode from "./contryByContryCode.js"
 import displayCurrentTimeInTimezone from "./timeZoneByContryCode.js"
-import JWt from "./jwt.js" 
+import JWt from "./jwt.js"
 
 
 class address {
@@ -31,7 +31,7 @@ class address {
                 },
                 country: {
                     code: contryCode,
-                    name: getCountryNameByCountryCode(contryCode) 
+                    name: getCountryNameByCountryCode(contryCode)
                 }
             }
         } catch (error) {
@@ -44,21 +44,25 @@ class address {
 
     async random() {
 
-        let randomAdd = await ContryInfo.random() 
+        let randomAdd = await ContryInfo.random()
         // console.log('addressData', addressData);
         // console.log('contryCode', randomAdd[1] , 'type ' , randomAdd[0]);
-        
+
         return this.#_addressCreator(randomAdd[0], randomAdd[1])
 
     }
 
     async code(contryCode) {
-        let addressData = await ContryInfo.code(contryCode)
-        // console.log('addressData', addressData);
-        if (!addressData) {
-            return null
+        try {
+            let addressData = await ContryInfo.code(contryCode)
+            // console.log('addressData', addressData);
+            if (!addressData) {
+                return null
+            }
+            return this.#_addressCreator(addressData, contryCode)
+        } catch (error) {
+            throw new Error(error);
         }
-        return this.#_addressCreator(addressData, contryCode)
 
     }
 

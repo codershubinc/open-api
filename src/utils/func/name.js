@@ -30,7 +30,7 @@ class name {
     async name(contryCode) {
         try {
             // console.log('contryCode', contryCode);
-            
+
             let name = await ContryInfo.code(contryCode)
 
             let g = Random.FromAnArray(['male', 'female'])
@@ -53,9 +53,7 @@ class name {
         }
 
         catch (error) {
-            console.log('error', error);
-            
-            return {}
+            throw new Error(error);
         }
     }
 }

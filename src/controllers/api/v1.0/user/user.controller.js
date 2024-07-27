@@ -3,6 +3,7 @@ import { asyncHandler } from "../../../../utils/asyncHandler.js";
 import Address from "../../../../utils/func/address.js";
 import Name from "../../../../utils/func/name.js";
 import Random from "../../../../utils/func/Random.js";
+import { ApiError } from "../../../../utils/responce/api/error.api.js";
 import { ApiResponse } from "../../../../utils/responce/api/responce.api.js";
 
 
@@ -29,6 +30,8 @@ const user = asyncHandler(async (req, res) => {
     }
     try {
         const user = await userInfoConstructor(contryCode)
+        console.log('user', user);
+        
         return res.status(200).json(
             new ApiResponse(
                 200,
@@ -38,18 +41,19 @@ const user = asyncHandler(async (req, res) => {
 
         )
     } catch (error) {
-        // console.error('Error loading module:', error);
+        console.error('Error loading module:', error);
+        console.log('ddgdrgrtgerter thtr hth trhrt');
+        
         return res.status(404).json(
-            new ApiResponse(
+            new ApiError(
                 404,
-                null,
                 'Something went wrong',
                 {
-                    or_try_query: countryCodes,
-                    or_try: 'random'
-
+                    error: 'Something went wrong',
+                    status: 404,
+                    try_these_codes: countryCodes,
+                    or_try : 'random'
                 }
-
             )
 
         )
@@ -74,10 +78,12 @@ const random = asyncHandler(async (req, res) => {
     } catch (error) {
 
         return res.status(404).json(
-            new ApiResponse(
+            new ApiError(
                 404,
-                null,
-                'Something went wrong'
+                'Something went wrong',
+                [
+                    'Failed to fetch user info',
+                ]
             )
         )
     }
