@@ -1,4 +1,4 @@
-const hobby = [
+const Hobby = [
     'Cooking',
     'Singing',
     'Dancing',
@@ -34,4 +34,4 @@ const hobby = [
     'Dancing',
 ]
 
-export default hobby
+export default Hobby

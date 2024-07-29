@@ -27,7 +27,7 @@ class address {
                 street: {
                     name: Random.FromAnArray(addressData?.streets),
                     number: Random.MinToMax(1, 1000),
-                    home_name_crypts_with_JWT: JWt.encrypt(Random.MinToMax(1, 1000))
+                    encrypted_home_name: JWt.encrypt(Random.alphas(10))
                 },
                 country: {
                     code: contryCode,

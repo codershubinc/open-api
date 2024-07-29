@@ -1,12 +1,16 @@
 import bcrypt from 'bcrypt';
 
 class crypt {
-    async encrypt(id, saltRounds = 10) {
-        return await bcrypt.hash(id, saltRounds);
+    async encrypt(id) {
+        try {
+            return await bcrypt.hash(id + ' ', 10);
+        } catch (error) {
+            // console.log('crypt error', error);
+            throw new Error(error)
+            
+        }
     }
-    async match(id, hash) {
-        return await bcrypt.compare(id, hash);
-    }
+
 }
 const Crypt = new crypt();
 
