@@ -47,10 +47,35 @@ const userInfoConstructor = async (contryCode) => {
         },
         address: await Address.code(contryCode),
         document_id: JWt.encrypt(Random.alphas(10))
-
     }
 
 }
+
+const random = asyncHandler(async (req, res) => {
+    try {
+        const contryCode = Random.FromAnArray(countryCodes)
+
+        return res.status(200).json(
+            new ApiResponse(
+                200,
+                await userInfoConstructor(contryCode),
+                'Successfully fetched user info'
+            )
+        )
+    } catch (error) {
+
+        return res.status(404).json(
+            new ApiError(
+                404,
+                'Something went wrong',
+                [
+                    'Failed to fetch user info',
+                ]
+            )
+        )
+    }
+})
+
 
 const user = asyncHandler(async (req, res) => {
     const { contryCode } = req.params
@@ -96,30 +121,6 @@ const user = asyncHandler(async (req, res) => {
 
 })
 
-const random = asyncHandler(async (req, res) => {
-    try {
-        const contryCode = Random.FromAnArray(countryCodes)
-
-        return res.status(200).json(
-            new ApiResponse(
-                200,
-                await userInfoConstructor(contryCode),
-                'Successfully fetched user info'
-            )
-        )
-    } catch (error) {
-
-        return res.status(404).json(
-            new ApiError(
-                404,
-                'Something went wrong',
-                [
-                    'Failed to fetch user info',
-                ]
-            )
-        )
-    }
-})
 
 
 export { user, random }
