@@ -109,7 +109,7 @@ const user = asyncHandler(async (req, res) => {
                     error: 'Something went wrong',
                     status: 404,
                     try_these_codes: countryCodes,
-                    or_try: 'random'
+                    or_try: '/random'
                 }
             )
 

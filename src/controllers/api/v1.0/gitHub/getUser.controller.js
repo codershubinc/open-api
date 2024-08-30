@@ -98,16 +98,16 @@ const avatarRandom = asyncHandler(async (req, res) => {
         );
     } catch (error) {
         return res.status(400).json(
+
             new ApiError(
-                new ApiError(
-                    404,
-                    'Bad Request',
-                    [
-                        'Fatal Error',
-                        error.message || 'Something went wrong'
-                    ]
-                )
+                404,
+                'Bad Request',
+                [
+                    'Fatal Error',
+                    error.message || 'Something went wrong'
+                ]
             )
+
         )
     }
 
