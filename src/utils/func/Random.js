@@ -35,7 +35,7 @@ class random {
     }
 
     Avatar({ avatarStyle, query, imageType, queryLength }) {
-        let autoQuery = query || 'auto'
+        let autoQuery = query?.replaceAll(' ', '+') || 'auto'
         let avatar = avatarStyle || 'auto'
         let image = imageType || 'auto'
 
