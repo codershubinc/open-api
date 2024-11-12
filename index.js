@@ -13,7 +13,14 @@ const port = 3002;
 // };
 
 // Middleware configuration
-app.use(cors());
+app.use(cors(
+    {
+        origin: [
+            '*',
+        ],
+        optionsSuccessStatus: 200  
+    }
+));
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true,
