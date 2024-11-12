@@ -115,6 +115,7 @@ const RandomImageGanaratorTypeQuery = (req, res) => {
             )
         )
     }
+    
     if (avatarStyles.includes(avatarStyle)) {
         avatarStyle = avatarStyle.toLowerCase().replaceAll(' ', '-')
     } else {
