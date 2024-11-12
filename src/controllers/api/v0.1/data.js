@@ -7,40 +7,66 @@ const imageTypes = [
 ]
 
 const avatarStyles = [
-
     'Adventurer',
+
     'Adventurer Neutral',
 
     'Avataaars',
+
     'Avataaars Neutral',
 
-    'Bottts',
+    'Big Ears',
+
+    'Big Ears Neutral',
+
+    'Big Smile',
+
+    'Bottts'
+    ,
     'Bottts Neutral',
 
     'Croodles',
+
     'Croodles Neutral',
 
+    'Dylan',
+
+    'Fun Emoji',
+
+    'Glass',
+
     'Icons',
+
+    'Identicon',
 
     'Initials',
 
     'Lorelei',
+
     'Lorelei Neutral',
 
+    'Micah',
+
+    'Miniavs',
+
     'Notionists',
+
     'Notionists Neutral',
 
     'Open Peeps',
+
+    'Personas',
 
     'Pixel Art',
 
     'Pixel Art Neutral',
 
-    'Shapes',
+    'Rings',
 
-    'Thumbs',
-    'auto'
-
+    'Shapes'
+    ,
+    'Thumbs'
+    ,
 ]
 
 

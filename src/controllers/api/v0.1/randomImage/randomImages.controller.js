@@ -2,7 +2,7 @@ import Random from '../../../../utils/func/Random.js'
 import { asyncHandler } from "../../../../utils/asyncHandler.js"
 import { ApiError } from "../../../../utils/responce/api/error.api.js"
 import { ApiResponse } from "../../../../utils/responce/api/responce.api.js"
-import { imageTypes , avatarStyles  } from "../data.js"
+import { imageTypes, avatarStyles } from "../data.js"
 
 
 const RandomImageGanarator = asyncHandler(async (req, res) => {
@@ -94,9 +94,9 @@ const RandomImageGanaratorQuery = asyncHandler(async (req, res) => {
     )
 })
 const RandomImageGanaratorTypeQuery = (req, res) => {
-    let { query, avatarStyle , imageType } = req.params
+    let { query, avatarStyle, imageType } = req.params
     if (!query) query = 'auto'
-    
+
     if (imageTypes.includes(imageType)) {
         imageType = imageType
     } else {
@@ -108,9 +108,24 @@ const RandomImageGanaratorTypeQuery = (req, res) => {
                     'Fatal Error',
                     'Invalid image type',
                     {
-                        image_types:imageTypes,
+                        image_types: imageTypes,
                         valid_image_styles: avatarStyles
                     },
+                ]
+            )
+        )
+    }
+    if (avatarStyles.includes(avatarStyle)) {
+        avatarStyle = avatarStyle.toLowerCase().replaceAll(' ', '-')
+    } else {
+        return res.status(400).json(
+            new ApiError(
+                400,
+                'Bad Request',
+                [
+                    'Fatal Error',
+                    'Invalid avatar style',
+                    avatarStyles
                 ]
             )
         )
