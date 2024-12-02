@@ -15,9 +15,7 @@ const port = 3002;
 // Middleware configuration
 app.use(cors(
     {
-        origin: [
-            '*',
-        ],
+        origin: "*" ,
         optionsSuccessStatus: 200  
     }
 ));
