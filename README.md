@@ -4,6 +4,10 @@
 
 This project is designed to provide an open API for various services. It aims to be a comprehensive and easy-to-use solution for developers.
 
+# For Installation and Usage
+
+refer to [USES.md](./USES.md)
+
 ## License
 
 This project is licensed under the MIT License.
