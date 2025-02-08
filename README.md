@@ -25,3 +25,5 @@ This project is licensed under the MIT License.
 <img src="./static/assests/g_pay.jpeg" alt="UPI ID : ingleswapnil2004@oksbi" style="border-radius:20px" >
 
 # <a href="upi://pay?pa=ingleswapnil2004@oksbi&pn=Swapnil_Ingle&cu=INR">UPI ID</a>
+
+- ingleswapnil2004@oksbi
