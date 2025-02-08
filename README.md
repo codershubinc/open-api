@@ -4,53 +4,6 @@
 
 This project is designed to provide an open API for various services. It aims to be a comprehensive and easy-to-use solution for developers.
 
-## Installation
-
-To install the project, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/open-api.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd open-api
-   ```
-3. Install the dependencies:
-   ```bash
-   npm install or bun install
-   ```
-
-## Usage
-
-To start the project, use the following command:
-
-```bash
-npm start or bun start
-```
-
-This will start the server and you can access the API at `http://localhost:3002`.
-
-## Contributing
-
-We welcome contributions! Please follow these steps to contribute:
-
-1. Fork the repository.
-
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-branch
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m "Description of your changes"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature-branch
-   ```
-5. Create a pull request.
-
 ## License
 
 This project is licensed under the MIT License.
@@ -60,3 +13,11 @@ This project is licensed under the MIT License.
 # you can use api at
 
 ### endpoint : [openapihub.vercel.app](https://openapihub.vercel.app/)
+
+# ![]() Sponsor my work
+
+<a href="https://www.buymeacoffee.com/codershubinc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+# <img src="./static/assests/g_pay.jpeg" alt="UPI ID : ingleswapnil2004@oksbi" style="height: 600px !important;border-radius:20px" >
+
+# <a href="upi://pay?pa=ingleswapnil2004@oksbi&pn=Swapnil_Ingle&cu=INR">UPI ID</a>
