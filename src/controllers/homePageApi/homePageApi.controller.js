@@ -1,3 +1,4 @@
+import CONSTANTS from "../../../constants/api.constants.js";
 import { asyncHandler } from "../../utils/asyncHandler.js";
 import { ApiResponse } from "../../utils/responce/api/responce.api.js";
 
@@ -8,10 +9,11 @@ const homePageApi = asyncHandler(async (req, res) => {
         data: {
             message: 'Successfully fetched home page api',
             api: {
+                endpoint: CONSTANTS.API_ENDPOINT,
                 random_image: {
-                    auto: "https://api-codershubinc.vercel.app/v0.1/random_image",
+                    auto: "/v0.1/random_image",
                     query: {
-                        url: "https://api-codershubinc.vercel.app/v0.1/random-image/query",
+                        url: "/v0.1/random-image/query",
                         query: [
                             "png",
                             "jpg",
@@ -23,13 +25,13 @@ const homePageApi = asyncHandler(async (req, res) => {
                 },
                 random_user: {
                     auto: {
-                        url: "https://api-codershubinc.vercel.app/v0.1/random_user"
+                        url: "/v0.1/random_user"
                     },
                     big: {
-                        url: "https://api-codershubinc.vercel.app/v0.1/random_user/big"
+                        url: "/v0.1/random_user/big"
                     },
                     big0: {
-                        url: "https://api-codershubinc.vercel.app/v0.1/random_user/big0"
+                        url: "/v0.1/random_user/big0"
                     }
                 },
                 more: {
@@ -44,6 +46,6 @@ const homePageApi = asyncHandler(async (req, res) => {
             apiResponce
         )
     )
-}) 
+})
 
 export { homePageApi }
