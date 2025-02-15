@@ -7,7 +7,6 @@ const homePageApi = asyncHandler(async (req, res) => {
         message: 'Successfully fetched home page api',
         status: 200,
         data: {
-            message: 'Successfully fetched home page api',
             api: {
                 endpoint: CONSTANTS.API_ENDPOINT,
                 random_image: {
@@ -21,7 +20,9 @@ const homePageApi = asyncHandler(async (req, res) => {
                             "svg",
                             "auto"
                         ]
-                    }
+                    },
+                    img: "/v0.1/random_image/img/:query",
+                    t: "/v0.1/random_image/t/:avatarStyle/:query/:imageType"
                 },
                 random_user: {
                     auto: {
@@ -32,11 +33,42 @@ const homePageApi = asyncHandler(async (req, res) => {
                     },
                     big0: {
                         url: "/v0.1/random_user/big0"
+                    },
+                    any: "/v0.1/random_user/:any/:query"
+                },
+                contry: {
+                    code: "/v1.0/contry/:contryCode",
+                    type: "/v1.0/contry/:contryCode/:type",
+                    base: "/v1.0/contry",
+                    random: "/v1.0/contry/random"
+                },
+                address: {
+                    code: "/v1.0/address/:contryCode",
+                    base: "/v1.0/address",
+                    random: "/v1.0/address/random"
+                },
+                user: {
+                    base: "/v1.0/user",
+                    code: "/v1.0/user/:contryCode"
+                },
+                saavnCDN: "/v1.0/saavnCDN",
+                github: {
+                    user: "/v1.0/github/user",
+                    randomUser: "/v1.0/github/user/random",
+                    randomAvatar: "/v1.0/github/avatar/random"
+                },
+                gravatar: "/v1.0/gravatar",
+                crypt: {
+                    c: {
+                        post: "/v1.0/crypt/c",
+                        get: "/v1.0/crypt/c"
+                    },
+                    d: {
+                        post: "/v1.0/crypt/d",
+                        get: "/v1.0/crypt/d"
                     }
                 },
-                more: {
-                    more: "We are adding more apis soon"
-                }
+                home: "/"
             }
         }
     }
