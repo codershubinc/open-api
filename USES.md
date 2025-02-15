@@ -91,16 +91,19 @@ We welcome contributions! Please follow these steps to contribute:
   - Query: None
   - Params: None
   - Example: `GET /v0.1/random_image`
+  - Next Route: `GET /v0.1/random_image/auto`
 
 - `GET /v0.1/random_image/auto`
   - Query: None
   - Params: None
   - Example: `GET /v0.1/random_image/auto`
+  - Next Route: `GET /v0.1/random_image/img/:query`
 
 - `GET /v0.1/random_image/img/:query`
   - Query: None
   - Params: `query` (string) - Image type (e.g., png, jpg, jpeg, svg, auto)
   - Example: `GET /v0.1/random_image/img/png`
+  - Next Route: `GET /v0.1/random_image/t/:avatarStyle/:query/:imageType`
 
 - `GET /v0.1/random_image/t/:avatarStyle/:query/:imageType`
   - Query: None
@@ -109,6 +112,7 @@ We welcome contributions! Please follow these steps to contribute:
     - `query` (string) - Image type (e.g., png, jpg, jpeg, svg, auto)
     - `imageType` (string) - Image type (e.g., png, jpg, jpeg, svg, auto)
   - Example: `GET /v0.1/random_image/t/Adventurer/png/svg`
+  - Next Route: `GET /v0.1/random_user`
 
 #### Random User Routes
 
@@ -116,16 +120,19 @@ We welcome contributions! Please follow these steps to contribute:
   - Query: None
   - Params: None
   - Example: `GET /v0.1/random_user`
+  - Next Route: `GET /v0.1/random_user/big`
 
 - `GET /v0.1/random_user/big`
   - Query: None
   - Params: None
   - Example: `GET /v0.1/random_user/big`
+  - Next Route: `GET /v0.1/random_user/big0`
 
 - `GET /v0.1/random_user/big0`
   - Query: None
   - Params: None
   - Example: `GET /v0.1/random_user/big0`
+  - Next Route: `GET /v0.1/random_user/:any/:query`
 
 - `GET /v0.1/random_user/:any/:query`
   - Query: None
@@ -133,6 +140,7 @@ We welcome contributions! Please follow these steps to contribute:
     - `any` (string) - Any string
     - `query` (string) - Any string
   - Example: `GET /v0.1/random_user/any/query`
+  - Next Route: `GET /v1.0/contry/:contryCode`
 
 #### Address Routes
 
@@ -140,16 +148,19 @@ We welcome contributions! Please follow these steps to contribute:
   - Query: None
   - Params: `contryCode` (string) - Country code (e.g., AU, BR, CA, CH, DE, DK, ES, GB, IN, US)
   - Example: `GET /v1.0/address/AU`
+  - Next Route: `GET /v1.0/address`
 
 - `GET /v1.0/address`
   - Query: None
   - Params: None
   - Example: `GET /v1.0/address`
+  - Next Route: `GET /v1.0/address/random`
 
 - `GET /v1.0/address/random`
   - Query: None
   - Params: None
   - Example: `GET /v1.0/address/random`
+  - Next Route: `GET /v1.0/contry/:contryCode`
 
 #### Country Routes
 
@@ -157,6 +168,7 @@ We welcome contributions! Please follow these steps to contribute:
   - Query: None
   - Params: `contryCode` (string) - Country code (e.g., AU, BR, CA, CH, DE, DK, ES, GB, IN, US)
   - Example: `GET /v1.0/contry/AU`
+  - Next Route: `GET /v1.0/contry/:contryCode/:type`
 
 - `GET /v1.0/contry/:contryCode/:type`
   - Query: None
@@ -164,16 +176,19 @@ We welcome contributions! Please follow these steps to contribute:
     - `contryCode` (string) - Country code (e.g., AU, BR, CA, CH, DE, DK, ES, GB, IN, US)
     - `type` (string) - Type of information (e.g., maleFirst, femaleFirst, lastName, citys, streets, states)
   - Example: `GET /v1.0/contry/AU/maleFirst`
+  - Next Route: `GET /v1.0/contry`
 
 - `GET /v1.0/contry`
   - Query: None
   - Params: None
   - Example: `GET /v1.0/contry`
+  - Next Route: `GET /v1.0/contry/random`
 
 - `GET /v1.0/contry/random`
   - Query: None
   - Params: None
   - Example: `GET /v1.0/contry/random`
+  - Next Route: `GET /v1.0/user`
 
 #### User Routes
 
@@ -181,11 +196,13 @@ We welcome contributions! Please follow these steps to contribute:
   - Query: None
   - Params: None
   - Example: `GET /v1.0/user`
+  - Next Route: `GET /v1.0/user/:contryCode`
 
 - `GET /v1.0/user/:contryCode`
   - Query: None
   - Params: `contryCode` (string) - Country code (e.g., AU, BR, CA, CH, DE, DK, ES, GB, IN, US)
   - Example: `GET /v1.0/user/AU`
+  - Next Route: `GET /v1.0/saavnCDN`
 
 #### Saavn CDN Routes
 
@@ -193,6 +210,7 @@ We welcome contributions! Please follow these steps to contribute:
   - Query: None
   - Params: None
   - Example: `GET /v1.0/saavnCDN`
+  - Next Route: `GET /v1.0/github/user`
 
 #### GitHub Routes
 
@@ -200,16 +218,19 @@ We welcome contributions! Please follow these steps to contribute:
   - Query: None
   - Params: None
   - Example: `GET /v1.0/github/user`
+  - Next Route: `GET /v1.0/github/user/random`
 
 - `GET /v1.0/github/user/random`
   - Query: None
   - Params: None
   - Example: `GET /v1.0/github/user/random`
+  - Next Route: `GET /v1.0/github/avatar/random`
 
 - `GET /v1.0/github/avatar/random`
   - Query: None
   - Params: None
   - Example: `GET /v1.0/github/avatar/random`
+  - Next Route: `GET /v1.0/gravatar`
 
 #### Gravatar Routes
 
@@ -217,6 +238,7 @@ We welcome contributions! Please follow these steps to contribute:
   - Query: None
   - Params: None
   - Example: `GET /v1.0/gravatar`
+  - Next Route: `POST /v1.0/crypt/c`
 
 #### Crypt Routes
 
@@ -224,18 +246,22 @@ We welcome contributions! Please follow these steps to contribute:
   - Query: None
   - Params: None
   - Example: `POST /v1.0/crypt/c`
+  - Next Route: `POST /v1.0/crypt/d`
 
 - `POST /v1.0/crypt/d`
   - Query: None
   - Params: None
   - Example: `POST /v1.0/crypt/d`
+  - Next Route: `GET /v1.0/crypt/c`
 
 - `GET /v1.0/crypt/c`
   - Query: None
   - Params: None
   - Example: `GET /v1.0/crypt/c`
+  - Next Route: `GET /v1.0/crypt/d`
 
 - `GET /v1.0/crypt/d`
   - Query: None
   - Params: None
   - Example: `GET /v1.0/crypt/d`
+  - Next Route: `GET /`
