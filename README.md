@@ -1,3 +1,5 @@
+![](https://readme-typing-svg.demolab.com?font=Orbitron&size=50&pause=1000&vCenter=true&width=435&lines=@codershubinc;Swapnil+Ingle;open-api&repeat=true)
+
 # Open API Project
 
 ## Description
@@ -10,7 +12,9 @@ refer to [USES.md](./USES.md)
 
 ## License
 
-This project is licensed under the MIT License.
+- This project is licensed under the MIT License.
+
+- See the [LICENSE](./LICENSE) file for more information.
 
 ---
 
