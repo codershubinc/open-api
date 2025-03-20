@@ -1,4 +1,4 @@
-![](https://readme-typing-svg.demolab.com?font=Orbitron&size=50&pause=1000&vCenter=true&width=435&lines=@codershubinc;By+Swapnil+Ingle;open-api&repeat=true)
+![](https://readme-typing-svg.demolab.com?font=Orbitron&size=50&pause=1000&vCenter=true&width=490&lines=@codershubinc;By+Swapnil+Ingle;open-api&repeat=true)
 
 # Open API Project
 
