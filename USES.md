@@ -47,6 +47,8 @@ We welcome contributions! Please follow these steps to contribute:
 
 ## API Routes
 
+For detailed API documentation, including all routes, queries, and params, please refer to the [API_README.md](./API_README.md) file.
+
 ### v0.1 Routes
 
 - `GET /v0.1/random_user/:any/:query`

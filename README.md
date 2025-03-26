@@ -31,3 +31,7 @@ refer to [USES.md](./USES.md)
 # <a href="upi://pay?pa=ingleswapnil2004@oksbi&pn=Swapnil_Ingle&cu=INR">UPI ID</a>
 
 - ingleswapnil2004@oksbi
+
+## API Documentation
+
+For detailed API documentation, including all routes, queries, and params, please refer to the [API_README.md](./API_README.md) file.
