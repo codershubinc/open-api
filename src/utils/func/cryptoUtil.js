@@ -5,9 +5,9 @@ class crypt {
         try {
             return await bcrypt.hash(id + ' ', 10);
         } catch (error) {
-            // console.log('crypt error', error);
+
             throw new Error(error)
-            
+
         }
     }
 

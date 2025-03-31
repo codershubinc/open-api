@@ -45,8 +45,6 @@ class address {
     async random() {
 
         let randomAdd = await ContryInfo.random()
-        // console.log('addressData', addressData);
-        // console.log('contryCode', randomAdd[1] , 'type ' , randomAdd[0]);
 
         return this.#_addressCreator(randomAdd[0], randomAdd[1])
 
@@ -67,15 +65,6 @@ class address {
     }
 
 }
-
-// open scours api links with git repos
-
-
-
-
-
-
-
 
 const Address = new address()
 

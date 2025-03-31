@@ -11,8 +11,6 @@ const cryptEmail = (email) => {
     }
 };
 
-
-const secretKey = 'your-256-bit-secret';
 class encryptObject {
     encryptString(
         str,
@@ -22,7 +20,7 @@ class encryptObject {
             const ciphertext = AES.encrypt(str, key);
             return encodeURIComponent(ciphertext.toString());
         } catch (error) {
-            console.log('Error in encryptString: ', error);
+
 
             throw new Error("Error in encryptString: " + error);
 
@@ -36,7 +34,7 @@ class encryptObject {
             const decodedStr = decodeURIComponent(encryptedStr);
             return AES.decrypt(decodedStr, key).toString(enc.Utf8);
         } catch (error) {
-            console.log('Error in decryptString: ', error);
+
             throw new Error("Error in decryptString: " + error);
         }
     };

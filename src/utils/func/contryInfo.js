@@ -9,14 +9,14 @@ class contryInfo {
             const data = await import(modulePath);
             return data;
         } catch (error) {
-            // console.error('Error loading module:', error);
+
             return null
         }
 
     }
     async random() {
         let Rand = Random.FromAnArray(countryCodes)
-        // Function to dynamically import the module
+
         return [await this.fetch(Rand), Rand]
     }
 
@@ -25,7 +25,7 @@ class contryInfo {
             const data = await this.fetch(contryCode)
             return data;
         } catch (error) {
-            // console.error('Error loading module:', error);
+
             return null
         }
 

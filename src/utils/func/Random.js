@@ -1,11 +1,6 @@
 import { userData, avatarArts } from "../../lib/data/userData.js"
+import { alphabets, numbers, symbols } from "./constants.js"
 
-const alphabets = [
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-]
-const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
-const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '[', ']', '{', '}', '|', '\\', '/', ':', ';', '<', '>', ',', '.', '?', '~']
 
 class random {
 
@@ -58,7 +53,7 @@ class random {
             let r = ''
             for (let i = 0; i < l; i++) {
                 r += this.FromAnArray(alphabets)
-                
+
             }
             console.log('r', r);
             return r

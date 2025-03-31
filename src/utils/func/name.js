@@ -15,10 +15,8 @@ class name {
                 last_name: last_name,
                 full_name: first_name + ' ' + middle_name + ' ' + last_name,
                 prefix: Random.FromAnArray(['Dr.', 'Mr.', 'Mrs.', 'Ms.']),
-                suffix: Random.FromAnArray(['Jr.', 'Sr.', 'I']),
                 title: Random.FromAnArray(['Dr.', 'Mr.', 'Mrs.', 'Ms.']),
                 gender: Random.FromAnArray(['male', 'female']),
-                // nickname: Random.FromAnArray(),
                 contryCode: contryCode
             }
 
