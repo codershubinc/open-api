@@ -20,7 +20,9 @@ refer to [USES.md](./USES.md)
 
 # you can use api at
 
-### endpoint : [openapihub.vercel.app](https://openapihub.vercel.app/)
+### endpoints :  
+- [openapihub.vercel.app](https://openapihub.vercel.app/)  
+- [openapi.codershubinc.tech](https://openapi.codershubinc.tech/)
 
 # ![]() Sponsor my work
 
