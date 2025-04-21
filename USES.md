@@ -20,7 +20,7 @@ To install the project, follow these steps:
 To start the project, use the following command:
 
 ```bash
-npm start or bun start
+npm run start 
 ```
 
 This will start the server and you can access the API at `http://localhost:3002`.
@@ -75,9 +75,7 @@ For detailed API documentation, including all routes, queries, and params, pleas
 - `GET /v1.0/github/user`
 - `GET /v1.0/github/user/random`
 - `GET /v1.0/github/avatar/random`
-- `GET /v1.0/gravatar`
-- `POST /v1.0/crypt/c`
-- `POST /v1.0/crypt/d`
+- `GET /v1.0/gravatar` 
 - `GET /v1.0/crypt/c`
 - `GET /v1.0/crypt/d`
 
