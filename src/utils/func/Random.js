@@ -57,7 +57,7 @@ class random {
                 r += this.FromAnArray(alphabets)
 
             }
-            console.log('r', r);
+            // console.log('r', r); // cleaned
             return r
         } catch (error) {
             // console.log('alphabets error', error);

@@ -50,7 +50,7 @@ const user = asyncHandler(async (req, res) => {
 const random = asyncHandler(async (req, res) => {
     try {
         let dataJson = await gitUser()
-        console.log('res user 0', dataJson);
+        // console.log('res user 0', dataJson); // cleaned
 
 
         if (dataJson.status === 404) {

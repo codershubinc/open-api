@@ -47,8 +47,8 @@ const code = asyncHandler(async (req, res) => {
     try {
         const { contryCode } = req.params
         const addressData = await Address.code(contryCode)
-        // console.log('addressData', addressData);
-        
+        // console.log('addressData', addressData); // cleaned
+
         if (contryCode === 'random') {
             return random(req, res)
         }

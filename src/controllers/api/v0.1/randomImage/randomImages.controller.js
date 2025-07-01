@@ -15,7 +15,7 @@ const RandomImageGanarator = asyncHandler(async (req, res) => {
         imageType: 'svg'
     }
 
-    // console.log('randomImageData', randomImageData);
+    // console.log('randomImageData', randomImageData); // cleaned
 
 
     return res.status(200).json(

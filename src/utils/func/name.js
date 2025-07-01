@@ -27,7 +27,7 @@ class name {
 
     async name(contryCode) {
         try {
-            // console.log('contryCode', contryCode);
+            // console.log('contryCode', contryCode); // cleaned
 
             let name = await ContryInfo.code(contryCode)
 
@@ -45,7 +45,7 @@ class name {
                 gender: g,
 
             }
-            // console.log('name', nameData);
+            // console.log('name', nameData); // cleaned
 
             return await this.#_nameCreator(nameData, contryCode)
         }

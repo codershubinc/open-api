@@ -47,7 +47,7 @@ const random = asyncHandler(async (req, res) => {
 })
 const code = asyncHandler(async (req, res) => {
     const { contryCode } = req.params
-    console.log('contryCode', contryCode);
+    // console.log('contryCode', contryCode); // cleaned
 
     if (contryCode === 'random') {
         return random(req, res)
@@ -106,13 +106,13 @@ const code = asyncHandler(async (req, res) => {
     )
 })
 const special = asyncHandler(async (req, res) => {
-    let  { contryCode, type } = req.params
-    console.log('contryCode', contryCode , 'type ' , type);
-    
+    let { contryCode, type } = req.params
+    // console.log('contryCode', contryCode , 'type ' , type); // cleaned
+
     let contryInfo
 
-    
-    if (contryCode === 'random' ) {
+
+    if (contryCode === 'random') {
         let getInf = await ContryInfo.random()
         contryCode = getInf[1]
         contryInfo = getInf[0]
@@ -139,10 +139,10 @@ const special = asyncHandler(async (req, res) => {
             )
         }
     } else {
-        console.log('contryCode', contryCode);    
-        contryInfo  = await ContryInfo.code(contryCode)
+        // console.log('contryCode', contryCode);    // cleaned
+        contryInfo = await ContryInfo.code(contryCode)
     }
-    console.log('contryInfo', contryInfo);
+    // console.log('contryInfo', contryInfo); // cleaned
     if (!contryInfo) {
         return res.status(404).json(
             new ApiError(

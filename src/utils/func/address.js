@@ -53,7 +53,7 @@ class address {
     async code(contryCode) {
         try {
             let addressData = await ContryInfo.code(contryCode)
-            // console.log('addressData', addressData);
+            // console.log('addressData', addressData); // cleaned
             if (!addressData) {
                 return null
             }

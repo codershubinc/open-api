@@ -13,7 +13,7 @@ import { ApiResponse } from "../../../../utils/responce/api/responce.api.js";
 
 
 const userInfoConstructor = async (contryCode) => {
-    console.log('contryCode', contryCode);
+    // console.log('contryCode', contryCode); // cleaned
 
 
     return {
@@ -79,15 +79,15 @@ const random = asyncHandler(async (req, res) => {
 
 const user = asyncHandler(async (req, res) => {
     const { contryCode } = req.params
-    // console.log('user', await userInfoConstructor(contryCode));
-    console.log('contryCode', contryCode);
+    // console.log('user', await userInfoConstructor(contryCode)); // cleaned
+    // console.log('contryCode', contryCode); // cleaned
     if (contryCode === 'random') {
         return random(req, res)
     }
     try {
         const user = await userInfoConstructor(contryCode)
-        // console.log('user', user);
-        // console.log('figjdfioj' , Random.id(100));
+        // console.log('user', user); // cleaned
+        // console.log('figjdfioj' , Random.id(100)); // cleaned
 
         return res.status(200).json(
             new ApiResponse(
@@ -99,7 +99,7 @@ const user = asyncHandler(async (req, res) => {
         )
     } catch (error) {
         console.error('Error loading module:', error);
-        // console.log('ddgdrgrtgerter thtr hth trhrt');
+        // console.log('ddgdrgrtgerter thtr hth trhrt'); // cleaned
 
         return res.status(404).json(
             new ApiError(
