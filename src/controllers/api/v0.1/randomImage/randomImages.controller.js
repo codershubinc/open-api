@@ -76,7 +76,7 @@ const RandomImageGanaratorQuery = asyncHandler(async (req, res) => {
     }
     const randomImage = Random.Avatar({
         avatarStyle: 'auto',
-        imageType: imageType,
+        imageType,
     })
     const randomImageData = {
         imageUrl: randomImage,
@@ -115,7 +115,7 @@ const RandomImageGanaratorTypeQuery = (req, res) => {
             )
         )
     }
-    
+
     if (avatarStyles.includes(avatarStyle)) {
         avatarStyle = avatarStyle.toLowerCase().replaceAll(' ', '-')
     } else {

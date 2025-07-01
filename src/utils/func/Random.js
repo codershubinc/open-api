@@ -34,6 +34,8 @@ class random {
         let avatar = avatarStyle || 'auto'
         let image = imageType || 'auto'
 
+        avatar = avatar.toLowerCase().replaceAll(' ', '-')
+
         if (queryLength && autoQuery === 'auto') {
             autoQuery = ''
             for (let i = 0; i < queryLength; i++) {
