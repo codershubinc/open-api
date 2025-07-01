@@ -20,15 +20,21 @@ refer to [USES.md](./USES.md)
 
 # you can use api at
 
-### endpoints :  
-- [openapihub.vercel.app](https://openapihub.vercel.app/)  
+### endpoints :
+
+- [openapihub.vercel.app](https://openapihub.vercel.app/)
 - [openapi.codershubinc.tech](https://openapi.codershubinc.tech/)
 
 # ![]() Sponsor my work
 
 <a href="https://www.buymeacoffee.com/codershubinc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 - ingleswapnil2004@oksbi
 
 ## API Documentation
 
 For detailed API documentation, including all routes, queries, and params, please refer to the [API_README.md](./API_README.md) file.
+
+---
+
+Avatars in this API are made with dicebear
