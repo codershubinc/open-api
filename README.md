@@ -33,7 +33,7 @@ refer to [USES.md](./USES.md)
 
 ## API Documentation
 
-For detailed API documentation, including all routes, queries, and params, please refer to the [API_README.md](./API_README.md) file.
+For detailed API documentation, including all routes, queries, and params, please refer to the [API_README.md](./USES.md) file.
 
 ---
 
